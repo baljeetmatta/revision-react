@@ -1,24 +1,35 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Greet from './Greet';
+import MyButton from './MyButton';
+import GreetClass from './GreetClass';
+import StateFunction from './StateFunction';
 
 function App() {
+
+
+  const firstButton=()=>{
+    alert("First Button clicked")
+  }
+
+  const secondButton=()=>{
+    alert("Second Button clicked")
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <p>hello to react</p>
+     <StateFunction/>
+     <GreetClass value="Code"/>
+     {/* <Greet value="Code" color="red"></Greet>
+   
+     <Greet value="Quotient"></Greet>
+    */}
+
+    <MyButton value="Send"  click={firstButton}/>
+    <MyButton value="Click me" click={secondButton}/>
+
     </div>
   );
 }
